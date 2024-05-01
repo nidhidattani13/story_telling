@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nidhi Dattani</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(215, 243, 255);
+        }
+        #vid{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        #vid {
+            margin-top: 100px;
+            height: 550px;
+            width: 550px;
+        }
+        #myVideo {
+            height: 100%;
+            width: 150%;
+            cursor: pointer; /* Add cursor pointer to indicate it's clickable */
+        }
+    </style>
+</head>
+<body>
+<div id="vid">
+    <video id="myVideo" autoplay onclick="togglePlayPause()">
+        <source src="Military.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <h3>CLICK ON VIDEO TO PLAY/PAUSE</h3>
+</div>
+
+<script>
+    var video = document.getElementById("myVideo");
+
+    function togglePlayPause() {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    }
+</script>
+</body>
+</html>
